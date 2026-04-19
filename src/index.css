@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Georgia", serif;
+  
+  --color-gold: #C5A059;
+  --color-gold-muted: rgba(197, 160, 89, 0.2);
+  --color-bg-dark: #0A0A0B;
+  --color-text-main: #FFFFFF;
+  --color-text-sub: #A0A0A0;
+  --color-border-line: rgba(255, 255, 255, 0.1);
+}
+
+@layer base {
+  body {
+    @apply bg-bg-dark text-text-main selection:bg-gold selection:text-bg-dark font-sans;
+  }
+}
+
+.section-title-line {
+  @apply flex items-center text-[11px] uppercase text-gold tracking-[2px] mb-5;
+}
+
+.section-title-line::after {
+  content: '';
+  @apply flex-1 h-[1px] bg-gold-muted ml-[15px];
+}
