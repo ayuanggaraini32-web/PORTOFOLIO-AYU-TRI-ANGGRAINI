@@ -1,16 +1,8 @@
-# Rencana Perbaikan Error TypeScript Merah di VSCode
+# Fix Images Not Loading on Vercel
 
-## Langkah-langkah:
-- [ ] Baca file-file tersisa (Hero.tsx, Navbar.tsx, PosterGallery.tsx, ProjectSection.tsx) untuk identifikasi error
-- [ ] Buat plan lengkap berdasarkan semua file
-- [ ] Konfirmasi plan dengan user
-- [x] Breakdown menjadi edits
-- [x] Edit files untuk fix motion imports (App, Hero, Navbar, About, Contact)
-- [x] Install framer-motion & @types/react @types/react-dom
-- [x] Test dengan `npm run dev` (server running on http://localhost:3001)
-- [ ] Verifikasi no more red errors
-
-## Progress: Motion imports fixed semua file, types installed, dev server up. Cek VSCode Problems panel - red hilang belum?
-
-## Status: Menunggu approval plan dan baca file tambahan
-
+## Steps
+- [ ] 1. Rename all images in `image/` to safe names (kebab-case, no spaces/parentheses)
+- [x] 2. Update `src/constants.ts` with new image paths
+- [x] 3. Test locally: `npm run dev`
+- [ ] 4. Commit & push to trigger Vercel redeploy
+- [ ] 5. Verify on Vercel deployment
